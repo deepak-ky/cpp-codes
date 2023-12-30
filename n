@@ -1,0 +1,13 @@
+int fcnt(node * root,int &cnt)
+{
+	if(root  == NULL)
+	{
+	return 0;
+	}
+	int v = 0;
+	if(root->data > low && root->data < high)
+	{
+	  v = 1;
+	}
+	return v + fcnt(root->left) + fcnt(root->right);
+}

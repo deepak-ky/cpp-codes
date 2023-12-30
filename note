@@ -1,0 +1,111 @@
+List of open programs on 23/10/2020
+1 : boggle_set_2
+2 : inorder_tree_traversal_iteratively
+3 : miss_can
+4 : k-amazing_numbers
+5 : non_zero_segments
+6 : codechef_dtu
+7 : cod_2
+8 : number_theory_counting_divisors
+9 : decimal_to_binary
+10 : yet_another_counting_problem
+11 : missionary_cannibal_problem
+12 : robot_collector_points
+
+
+
+
+
+
+
+
+
+
+
+
+best of sublime . txt 
+Seti theme
+agila neon theme + with seti color scheme
+side bar enhancements
+
+
+	#ifndef _offline
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+#endif
+
+
+ctrl + m => moves to the matching bracket
+ctrl + shift + up/down => move a line up or down
+
+
+
+ctrl + alt + up/down => select multiple colomn
+ctrl + pageup(9)/pagedown(3) => moves to the next or the previous tab(works only when numlock is off)
+ 
+
+
+
+
+if everything is correct and then a segmentation fault then
+declare all data structures dynamically
+
+to change the default snippet settings install package resourse viewer
+link to info : https://forum.sublimetext.com/t/solved-how-to-deactivate-default-snippet-s/21052
+
+
+
+1 : subarrays with distinct elemetns
+2 : point on spiral
+3 : cows_and_primitive_root
+4 : mike and hash trick
+5 : longest_repeating_sequence
+6 : strange_sddition
+7 : finding_cb_numbers
+
+
+                8
+              /   \
+             10    3
+            /  \    \
+           1    6     14
+               / \   /
+              9   7 13
+
+
+Preorder input : 
+8
+10
+1
+-1 -1
+6
+9
+-1 -1
+7
+-1 -1 
+3
+-1
+14
+13
+-1
+-1
+-1
+
+
+Input for graph and kruskal
+9    -> vertices
+14   -> edges
+1         7      6   //weight , src , dest in that order
+2         8      2
+2         6      5
+4         0      1
+4         2      5
+6         8      6
+7         2      3
+7         7      8
+8         0      7
+8         1      2
+9         3      4
+10        5      4
+11        1      7
+14        3      5

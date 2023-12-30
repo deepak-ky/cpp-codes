@@ -1,0 +1,19 @@
+Seti theme
+agila neon theme + with seti color scheme
+side bar enhancements
+
+
+	#ifndef _offline
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+#endif
+
+
+ctrl + m => moves to the matching bracket
+ctrl + shift + up/down => move a line up or down
+
+
+
+ctrl + alt + up/down => select multiple colomn
+ctrl + pageup(9)/pagedown(3) => moves to the next or the previous tab(works only when numlock is off)
+ 

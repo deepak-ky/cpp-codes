@@ -1,0 +1,83 @@
+#include<iostream>
+#include<bits/stdc++.h>
+using namespace std;
+#define int                          long long
+#define varname(name)                #name
+#define mod                          1000000007
+#define wer(x)                       cout<<"\n"<<varname(x)<<" here : "<<x<<"\n"
+#define asdf(a,n)                    for(int i=0;i<n;i++)  cin>>a[i]
+#define out(a,n)                     cout<<"\n"<<varname(a)<<" here is : \n";for(int i=0;i<n;i++) cout<<a[i]<<" "; cout<<endl
+#define pb                           push_back
+#define yes                          cout << "YES" << endl;
+#define no                           cout << "NO"  << endl;
+#define f                            first
+#define s                            second
+
+void init()
+{
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL); cout.tie(NULL);
+#ifndef ONLINE_JUDGE
+	// for getting input from input.txt
+	freopen("input.txt", "r", stdin);
+	// for writing output to output.txt
+	freopen("output.txt", "w", stdout);
+#endif
+}
+
+
+
+int32_t main()
+{
+	init();
+	int t = 1;
+	cin >> t;
+	while (t--)
+	{
+		int n, k;
+		cin >> n >> k;
+		int a[n * k];
+		for (int i = 0; i < (n * k); i++)
+		{
+			cin >> a[i];
+		}
+		if (n == 1)
+		{
+			int sum = 0;
+			for (auto x : a)
+			{
+				sum += x;
+			}
+			cout << sum << endl;
+		}
+		else if (n == 2)
+		{
+
+			int sum = 0;
+			for (int i = 0; i < n * k; i += 2)
+			{
+				sum += a[i];
+			}
+			cout << sum << endl;
+		}
+		else
+		{
+			int sum = 0;
+			int median_at = (n + 1) / 2;
+			int w = median_at - 1;
+			w = n - w;
+			int j = (n * k) - w;
+			int i = 0;
+			while (i < k)
+			{
+				sum += a[j];
+				j = j - (w);
+				i++;
+			}
+			cout << sum << endl;
+		}
+
+
+	}
+	return 0;
+}

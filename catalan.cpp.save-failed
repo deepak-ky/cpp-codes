@@ -1,0 +1,26 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+long int fact(long int a)
+{
+ if(a==1)
+ {return 1;}
+ else return a*fact(a-1);
+}
+int main()
+{
+long int n,w,r,h,j,i,k;
+cin>>n;
+j=fact(n);
+cout<<"n! : "<<j<<endl;
+k=n*2;
+w =fact(k);
+cout<<"2n! : "<<w<<endl;
+r=fact(n+1);
+cout<<"(n+1)! : "<<r<<endl;
+i=j*r;
+cout<<"n! * (n+1)! :"<<i<<endl;
+h=w/i;
+cout<<h;
+return 0;
+}
