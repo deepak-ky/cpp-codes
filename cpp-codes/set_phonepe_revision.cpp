@@ -11,7 +11,11 @@ using namespace std;
 #define yes                          cout << "YES" << endl;
 #define no                           cout << "NO"  << endl;
 #define f                            first
-#define se                            second
+#define s                            second
+
+//Prints
+template <class T>
+void print_v(vector<T> &v) { cout << "{"; for (auto x : v) cout << x << ","; cout << "}"; }
 
 void init()
 {
@@ -25,44 +29,14 @@ void init()
 #endif
 }
 
-class Item
-{
+class customCompare{
 public:
-	int value;
-	int weight;
-};
-
-class compare
-{
-public:
-	bool operator()(Item const& i1 , Item const& i2)
-	{
-
-
-		//THE RULE IS : IF THIS FUNCTION RETURNS TRUE ,
-		//                                               THEN I2 WILL GET POPPED FIRST
-
-		//  I2 WILL BE AT THE TOP , AND I1 WILL BE BELOW IT.
-
-
-		//              ELSE IF THIS FUNCTION RETURS FALSE,
-		//                                                   THEN I1 WILL GET POPPED FIRST
-
-
-
-
-		double d1 = double(i1.value / i1.weight);
-		double d2 = double(i2.value / i2.weight);
-
-		if (d1 < d2)
-		{
-			return true;
+	bool operator()(const pair<int,int> &p1, const pair<int,int> &p2) const {
+		if(p1.first == p2.first){
+			return p1.second < p2.second;
+		}else{
+			return p1.first > p2.first;
 		}
-		else if (d1 == d2)
-		{
-			return false;
-		}
-		else return false;
 	}
 };
 
@@ -70,38 +44,26 @@ int32_t main()
 {
 	init();
 	int t = 1;
-	//cin>>t;
+	//cin >> t;
 	while (t--)
 	{
+		set<pair<int,int>, customCompare> s;
+		s.insert({-7,0});
+		s.insert({-8,1});
+		s.insert({7,2});
+		s.insert({5,3});
+
+		for(auto &x : s) cout << "(" << x.first << "," << x.second << "),"; cout << endl;
+
+		s.erase({-7,0});
+
+		for(auto &x : s) cout << "(" << x.first << "," << x.second << "),"; cout << endl;
+
+		s.insert({7,4});
+
+		for(auto &x : s) cout << "(" << x.first << "," << x.second << "),"; cout << endl;
 
 
-
-
-		priority_queue<Item, vector<Item>, compare> pq;
-
-		Item i1;
-		i1.value = 100;
-		i1.weight = 50;
-
-
-		Item i2;
-
-		i2.value = 40;
-		i2.weight = 20;
-
-		// Item i3;
-		// i3.value = 10;
-		// i3.weight = 1;
-
-
-		pq.push(i1);
-		pq.push(i2);
-		//pq.push(i3);
-
-
-		Item it = pq.top();
-
-		cout << it.weight;
 
 	}
 	return 0;
