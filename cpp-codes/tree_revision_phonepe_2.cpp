@@ -235,7 +235,7 @@ void iterativePostTraversal(node *root){
 		else if(mp[t] == 1) s.push(t->right);
 		else if(mp[t] == 2) cout << t->data << " ";
 		else if(mp[t] == 3) s.pop();
-		mp[t]++; //to decide, what to do next
+		 
 	}
 }
 

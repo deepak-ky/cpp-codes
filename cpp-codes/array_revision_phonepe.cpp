@@ -258,3 +258,35 @@ int32_t main()
 	}
 	return 0;
 }
+
+
+pair<bool,node*> detectCycle(node *head){
+	if(head == NULL || head->next == NULL){
+		return {false,NULL};
+	}
+
+	node *slow = head;
+	node *fast = head;
+
+	while(fast != NULL && fast->next != NULL){
+		slow = slow->next;
+		fast = fast->next->next;
+
+		if(slow == fast){
+			break;
+		}
+	}
+
+	if(slow != fast){
+		return {false,NULL};
+	}else{
+		node *temp = head;
+		while(fast != temp){
+			fast = fast->next;
+			temp = temp->next;
+
+		}
+
+		return {true,fast};
+	}
+}
