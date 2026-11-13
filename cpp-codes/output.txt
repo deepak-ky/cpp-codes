@@ -1,2 +1,38 @@
-hello world
-1, 2, 3, 
+8 10 1 6 9 7 3 14 13 
+PRE_ORDER : 8 10 1 6 9 7 3 14 13 
+IN_ORDER : 1 10 9 6 7 8 3 13 14 
+POST_ORDER : 1 9 7 6 10 13 14 3 8 
+HEIGHT : 4
+LEVEL ORDER PRINT-1 : 
+8 
+10 3 
+1 6 14 
+9 7 13 
+LEVEL_ORDER_PRINT-2 : 
+8 
+10 3 
+1 6 14 
+9 7 13 
+Count of nodes : 9
+sum of nodes : 71
+---
+maxDiameter : 6
+height : 4
+--- binary tree sum replacement --- 
+8 
+10 3 
+1 6 14 
+9 7 13 
+--- height balanced tree -----
+4
+0
+---- create balanced tree from an array ---- 
+2 
+1 3 
+4 
+1 2 3 4 
+------ build tree from pre order and post order -------- 
+1 
+2 5 
+3 4 6 
+8 7 
